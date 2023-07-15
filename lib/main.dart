@@ -26,15 +26,7 @@ class run_app_class extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: TextButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return run_app_two();
-                  },
-                ));
-              },
-              child: Text('next')),
+          child: Image(image: AssetImage('images/c.png')),
         ),
       ),
     );
