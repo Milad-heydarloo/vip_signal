@@ -13,7 +13,9 @@ class run_app_class extends StatelessWidget {
       home: Scaffold(
           body: SafeArea(
               child: Center(
-        child: Text('data'),
+        child: TextButton(onPressed: onPressed(){
+
+        }, child: Text('next')),
       ))),
     );
   }
