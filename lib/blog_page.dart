@@ -64,9 +64,11 @@ class run_app_class extends StatelessWidget {
                         fontSize: 16,
                         color: Colors.red,
                         fontWeight: FontWeight.bold)),
+                Icon(Icons.sell_outlined, color: Colors.red),
                 SizedBox(
                   width: 10,
                 ),
+                Icon(Icons.price_check, color: Colors.green),
                 Text(' سیگنال 12000 خرید',
                     textAlign: TextAlign.center,
                     style: TextStyle(
