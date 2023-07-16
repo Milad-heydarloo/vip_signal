@@ -77,8 +77,25 @@ class run_app_two extends StatelessWidget {
                       minimumSize: Size(200.0, 40.0),
                       primary: Colors.white),
                   onPressed: () {},
-                  child: Text('ثبت نام'),
+                  child: Text(
+                    'ثبت نام',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
+                TextButton(
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(200.0, 40.0),
+                        primary: Colors.black54,
+                        backgroundColor: Colors.white),
+                    onPressed: () {},
+                    child: Text(
+                      'ورود',
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                    )),
               ]),
         ),
       ),
