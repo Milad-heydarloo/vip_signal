@@ -20,6 +20,7 @@ class run_run extends StatelessWidget {
   }
 }
 
+//https://m2.material.io/components/buttons
 class run_app_class extends StatelessWidget {
   const run_app_class({super.key});
 
@@ -49,13 +50,34 @@ class run_app_two extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrangeAccent,
+      backgroundColor: Colors.black,
       body: SafeArea(
-        child: Center(
-          //  child: Rating(),
-          child: Image(image: AssetImage('images/welcome.png')),
-          // child:LikeButton(),
-        ),
+        //  child: Rating(),
+        //child: Image(image: AssetImage('images/welcome.png')),
+        // child:LikeButton(),
+
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              SizedBox(height: 110),
+              Text('خوش آمدید',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold)),
+              Image(
+                image: AssetImage('images/welcome.png'),
+              ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                    side: BorderSide(color: Colors.white),
+                    minimumSize: Size(200.0, 40.0),
+                    primary: Colors.white),
+                onPressed: () {},
+                child: Text('ثبت نام'),
+              ),
+            ]),
       ),
     );
   }
