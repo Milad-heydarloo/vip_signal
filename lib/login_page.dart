@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:vip_signal/blog_page.dart';
+import 'package:vip_signal/machin_larnimng.dart';
 
 class run_app_two extends StatelessWidget {
   const run_app_two({super.key});
@@ -58,7 +60,13 @@ class run_app_two extends StatelessWidget {
                     ),
                     backgroundColor: Colors.black,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) {
+                        return blog_pages();
+                      },
+                    ));
+                  },
                   child: Text(
                     'ثبت نام',
                     style: TextStyle(
