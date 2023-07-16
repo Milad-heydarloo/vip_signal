@@ -32,11 +32,18 @@ class run_app_class extends StatelessWidget {
     return Scaffold(
       appBar: _app_bar(),
       body: SafeArea(
-        child: Center(
-          child: Column(children: [
-            Rating(),
-            LikeButton(),
-          ]),
+        child: Padding(
+          padding: EdgeInsets.all(8),
+          child: Center(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image(
+                image: AssetImage(
+                  'images/c.png',
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );
