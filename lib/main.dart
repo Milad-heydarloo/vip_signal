@@ -13,6 +13,8 @@ class run_run extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'vazir'),
+      debugShowCheckedModeBanner: false,
       home: run_app_class(),
     );
   }
@@ -26,7 +28,15 @@ class run_app_class extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Image(image: AssetImage('images/c.png')),
+          child: TextButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return run_app_two();
+                  },
+                ));
+              },
+              child: Text('next')),
         ),
       ),
     );
@@ -39,9 +49,12 @@ class run_app_two extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepOrangeAccent,
       body: SafeArea(
         child: Center(
-          child: Rating(),
+          //  child: Rating(),
+          child: Image(image: AssetImage('images/welcome.png')),
+          // child:LikeButton(),
         ),
       ),
     );
@@ -66,8 +79,9 @@ class _RatingState extends State<Rating> {
       children: [
         Text('Rating: $rating'),
         ...List.generate(
-            5,
+            8,
             (i) => IconButton(
+                  disabledColor: Colors.white,
                   icon: Icon(
                     Icons.star,
                     color: rating >= i + 1 ? Colors.red : Colors.grey,
@@ -78,3 +92,36 @@ class _RatingState extends State<Rating> {
     );
   }
 }
+
+class LikeButton extends StatefulWidget {
+  const LikeButton({Key? key}) : super(key: key);
+
+  @override
+  _LikeButtonState createState() => _LikeButtonState();
+}
+
+class _LikeButtonState extends State<LikeButton> {
+  bool like = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () => setState(() => like = !like),
+      child: Icon(
+        like ? Icons.favorite : Icons.favorite_border,
+        color: like ? Colors.red : Colors.grey,
+      ),
+    );
+  }
+}
+
+// TextButton(
+//             onPressed: () {
+//               Navigator.of(context).push(MaterialPageRoute(
+//                 builder: (BuildContext context) {
+//                   return run_app_two();
+//                 },
+//               ));
+//             },
+//             child: Text('next'),
+//           ),
