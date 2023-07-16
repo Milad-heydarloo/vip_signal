@@ -76,6 +76,13 @@ class run_app_class extends StatelessWidget {
                         color: Colors.green,
                         fontWeight: FontWeight.bold)),
               ],
+            ),
+            Container(
+              width: 200,
+              child: Divider(
+                color: Colors.black,
+                thickness: 1,
+              ),
             )
           ],
         ),
