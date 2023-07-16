@@ -53,15 +53,3 @@ class _LikeButtonState extends State<LikeButton> {
     );
   }
 }
-
-
-// TextButton(
-//             onPressed: () {
-//               Navigator.of(context).push(MaterialPageRoute(
-//                 builder: (BuildContext context) {
-//                   return run_app_two();
-//                 },
-//               ));
-//             },
-//             child: Text('next'),
-//           ),

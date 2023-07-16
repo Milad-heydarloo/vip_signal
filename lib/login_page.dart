@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:vip_signal/blog_page.dart';
-import 'package:vip_signal/machin_larnimng.dart';
 
 class run_app_two extends StatelessWidget {
   const run_app_two({super.key});
@@ -99,19 +98,25 @@ class run_app_two extends StatelessWidget {
                     ),
                   ),
                 ),
-                // TextButton(
-                //   style: TextButton.styleFrom(
-                //       minimumSize: Size(200.0, 40.0),
-                //       primary: Colors.black,
-                //       backgroundColor: Colors.white),
-                //   onPressed: () {},
-                //   child: Text(
-                //     'ورود',
-                //     style: TextStyle(
-                //       fontSize: 16,
-                //     ),
-                //   ),
-                // ),
+                Container(
+                  width: 200,
+                  child:
+                      Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        textDirection: TextDirection.rtl,
+                        'فراموشی رمز عبور',
+                        style: TextStyle(
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ]),
+                ),
               ]),
         ),
       ),
