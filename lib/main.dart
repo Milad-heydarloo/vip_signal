@@ -61,12 +61,28 @@ class run_app_two extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: [
-                SizedBox(height: 110),
-                Text('خوش آمدید',
+                SizedBox(
+                  height: 110,
+                ),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Text(
+                    'خوش آمدید',
                     style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold)),
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+//https://fonts.google.com/icons?selected=Material+Icons:login:&icon.query=enter&icon.platform=flutter
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.login,
+                    color: Colors.white,
+                  ),
+                ]),
+
                 Image(
                   image: AssetImage('images/welcome.png'),
                 ),
@@ -90,7 +106,7 @@ class run_app_two extends StatelessWidget {
                 TextButton(
                     style: TextButton.styleFrom(
                         minimumSize: Size(200.0, 40.0),
-                        primary: Colors.black54,
+                        primary: Colors.black,
                         backgroundColor: Colors.white),
                     onPressed: () {},
                     child: Text(
