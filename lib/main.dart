@@ -73,7 +73,10 @@ class run_app_two extends StatelessWidget {
                 //https://m2.material.io/components/buttons
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.white),
+                      side: BorderSide(
+                        color: Colors.white,
+                        width: 2,
+                      ),
                       minimumSize: Size(200.0, 40.0),
                       primary: Colors.white),
                   onPressed: () {},
