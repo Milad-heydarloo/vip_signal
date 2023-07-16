@@ -5,6 +5,14 @@ import 'package:vip_signal/machin_larnimng.dart';
 class run_app_two extends StatelessWidget {
   const run_app_two({super.key});
 
+  void runpage(BuildContext context, Widget page) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) {
+        return page;
+      },
+    ));
+  }
+
   @override
   Widget build(
     BuildContext context,
@@ -61,11 +69,7 @@ class run_app_two extends StatelessWidget {
                     backgroundColor: Colors.black,
                   ),
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) {
-                        return blog_pages();
-                      },
-                    ));
+                    runpage(context, blog_pages());
                   },
                   child: Text(
                     'ثبت نام',
@@ -83,7 +87,9 @@ class run_app_two extends StatelessWidget {
                       40.0,
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    runpage(context, blog_pages());
+                  },
                   child: Text(
                     'ورود',
                     style: TextStyle(
