@@ -62,7 +62,7 @@ class run_app_two extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: [
                 SizedBox(
-                  height: 110,
+                  height: 70,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
@@ -103,18 +103,33 @@ class run_app_two extends StatelessWidget {
                     ),
                   ),
                 ),
-                TextButton(
-                    style: TextButton.styleFrom(
-                        minimumSize: Size(200.0, 40.0),
-                        primary: Colors.black,
-                        backgroundColor: Colors.white),
-                    onPressed: () {},
-                    child: Text(
-                      'ورود',
-                      style: TextStyle(
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    minimumSize: Size(200.0, 40.0),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    'ورود',
+                    style: TextStyle(
+                        color: Colors.black,
                         fontSize: 16,
-                      ),
-                    )),
+                        fontStyle: FontStyle.normal),
+                  ),
+                ),
+                // TextButton(
+                //   style: TextButton.styleFrom(
+                //       minimumSize: Size(200.0, 40.0),
+                //       primary: Colors.black,
+                //       backgroundColor: Colors.white),
+                //   onPressed: () {},
+                //   child: Text(
+                //     'ورود',
+                //     style: TextStyle(
+                //       fontSize: 16,
+                //     ),
+                //   ),
+                // ),
               ]),
         ),
       ),
