@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(run_run());
+  runApp(
+    run_run(),
+  );
 }
 
 //chon faqat gharare mohtava taghir koneh
@@ -11,9 +13,13 @@ class run_run extends StatelessWidget {
   const run_run({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'vazir'),
+      theme: ThemeData(
+        fontFamily: 'vazir',
+      ),
       debugShowCheckedModeBanner: false,
       home: run_app_class(),
     );
@@ -24,19 +30,26 @@ class run_app_class extends StatelessWidget {
   const run_app_class({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return Scaffold(
       body: SafeArea(
         child: Center(
           child: TextButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return run_app_two();
-                  },
-                ));
-              },
-              child: Text('next')),
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return run_app_two();
+                },
+              ));
+            },
+            child: Text(
+              'next',
+            ),
+          ),
         ),
       ),
     );
@@ -47,7 +60,9 @@ class run_app_two extends StatelessWidget {
   const run_app_two({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -89,32 +104,41 @@ class run_app_two extends StatelessWidget {
                 //https://m2.material.io/components/buttons
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      side: BorderSide(
-                        color: Colors.white,
-                        width: 2,
-                      ),
-                      minimumSize: Size(200.0, 40.0),
-                      primary: Colors.white),
+                    side: BorderSide(
+                      color: Colors.white,
+                      width: 2,
+                    ),
+                    minimumSize: Size(
+                      200.0,
+                      40.0,
+                    ),
+                    backgroundColor: Colors.black,
+                  ),
                   onPressed: () {},
                   child: Text(
                     'ثبت نام',
                     style: TextStyle(
+                      color: Colors.white,
                       fontSize: 16,
                     ),
                   ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    minimumSize: Size(200.0, 40.0),
+                    backgroundColor: Colors.white,
+                    minimumSize: Size(
+                      200.0,
+                      40.0,
+                    ),
                   ),
                   onPressed: () {},
                   child: Text(
                     'ورود',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontStyle: FontStyle.normal),
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontStyle: FontStyle.normal,
+                    ),
                   ),
                 ),
                 // TextButton(
