@@ -12,11 +12,24 @@ class run_app_two extends StatelessWidget {
     ));
   }
 
+  PreferredSizeWidget _app_bar() {
+    return AppBar(
+      backgroundColor: Colors.black,
+      centerTitle: true,
+      titleTextStyle: TextStyle(color: Colors.white),
+      title: Text(
+        'برنامه بورسی اکانت',
+        style: TextStyle(fontSize: 25, fontFamily: 'vazir'),
+      ),
+    );
+  }
+
   @override
   Widget build(
     BuildContext context,
   ) {
     return Scaffold(
+      appBar: _app_bar(),
       backgroundColor: Colors.black,
       body: SafeArea(
         //  child: Rating(),
