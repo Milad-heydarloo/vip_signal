@@ -20,7 +20,6 @@ class run_run extends StatelessWidget {
   }
 }
 
-//https://m2.material.io/components/buttons
 class run_app_class extends StatelessWidget {
   const run_app_class({super.key});
 
@@ -69,6 +68,7 @@ class run_app_two extends StatelessWidget {
               Image(
                 image: AssetImage('images/welcome.png'),
               ),
+              //https://m2.material.io/components/buttons
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
                     side: BorderSide(color: Colors.white),
