@@ -55,29 +55,32 @@ class run_app_two extends StatelessWidget {
         //child: Image(image: AssetImage('images/welcome.png')),
         // child:LikeButton(),
 
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              SizedBox(height: 110),
-              Text('خوش آمدید',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold)),
-              Image(
-                image: AssetImage('images/welcome.png'),
-              ),
-              //https://m2.material.io/components/buttons
-              OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.white),
-                    minimumSize: Size(200.0, 40.0),
-                    primary: Colors.white),
-                onPressed: () {},
-                child: Text('ثبت نام'),
-              ),
-            ]),
+        child: SingleChildScrollView(
+          //vaghti goshi rotate mishe in singel child baes mishe mohtava scrol beshe
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                SizedBox(height: 110),
+                Text('خوش آمدید',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold)),
+                Image(
+                  image: AssetImage('images/welcome.png'),
+                ),
+                //https://m2.material.io/components/buttons
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                      side: BorderSide(color: Colors.white),
+                      minimumSize: Size(200.0, 40.0),
+                      primary: Colors.white),
+                  onPressed: () {},
+                  child: Text('ثبت نام'),
+                ),
+              ]),
+        ),
       ),
     );
   }
