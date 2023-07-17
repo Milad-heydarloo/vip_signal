@@ -15,13 +15,14 @@ class _RatingState extends State<Rating> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('Rating: $rating'),
         ...List.generate(
             5,
             (i) => IconButton(
                   icon: Icon(
-                    Icons.star,
-                    color: rating >= i + 1 ? Colors.red : Colors.grey,
+                    Icons.paid,
+                    color: rating >= i + 1
+                        ? Color.fromARGB(255, 36, 158, 79)
+                        : Colors.grey,
                   ),
                   onPressed: () => setState(() => rating = i + 1),
                 ))
