@@ -22,7 +22,7 @@ class _RatingState extends State<Rating> {
             (i) => IconButton(
                   disabledColor: Colors.white,
                   icon: Icon(
-                    Icons.star,
+                    Icons.stairs,
                     color: rating >= i + 1 ? Colors.red : Colors.grey,
                   ),
                   onPressed: () => setState(() => rating = i + 1),
