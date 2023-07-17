@@ -12,17 +12,15 @@ class _RatingState extends State<Rating> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      mainAxisSize: MainAxisSize.min,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text('Rating: $rating'),
         ...List.generate(
-            8,
+            5,
             (i) => IconButton(
-                  disabledColor: Colors.white,
                   icon: Icon(
-                    Icons.stairs,
+                    Icons.star,
                     color: rating >= i + 1 ? Colors.red : Colors.grey,
                   ),
                   onPressed: () => setState(() => rating = i + 1),
