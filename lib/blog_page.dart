@@ -86,6 +86,7 @@ Widget _get_list_date(
             ),
           ),
         ),
+        Rating(),
         Text(
           '$title',
           style: TextStyle(

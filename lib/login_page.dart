@@ -65,7 +65,7 @@ class run_app_two extends StatelessWidget {
                 ]),
 
                 Image(
-                  image: AssetImage('images/welcome.png'),
+                  image: AssetImage('images/w.png'),
                 ),
                 //https://m2.material.io/components/buttons
                 OutlinedButton(
