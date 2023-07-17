@@ -42,18 +42,28 @@ class run_app_class extends StatelessWidget {
 }
 
 Widget _get_logout(BuildContext context) {
-  return TextButton(
+  return Padding(
+    padding: EdgeInsets.only(
+      bottom: 10,
+    ),
+    child: OutlinedButton(
+      style: OutlinedButton.styleFrom(
+          minimumSize: Size(200.0, 40.0),
+          side: BorderSide(width: 4, color: Colors.amber)),
       onPressed: () {
         Navigator.pop(context);
       },
       child: Text(
         'خروج از حساب',
         style: TextStyle(
-          color: Colors.amber,
+          color: Colors.black,
           fontSize: 18,
+          fontFamily: 'vazir',
           fontWeight: FontWeight.bold,
         ),
-      ));
+      ),
+    ),
+  );
 }
 
 Widget Dataa() {
