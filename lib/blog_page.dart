@@ -3,7 +3,7 @@ import 'package:vip_signal/login_page.dart';
 import 'package:vip_signal/machin_larnimng.dart';
 
 class blog_pages extends StatelessWidget {
-  const blog_pages({super.key});
+  blog_pages({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +29,104 @@ class run_app_class extends StatelessWidget {
   Widget build(
     BuildContext context,
   ) {
+    final List<Widget> showe = [
+      _get_list_date(
+        sel: ' سیگنال 120500 فروش',
+        buy: ' سیگنال 142000 خرید',
+        image: 'images/a.png',
+        title: '14 آبان Alchemy Pay سیگنال خرید',
+      ),
+      _get_list_date(
+        sel: ' سیگنال 693000 فروش',
+        buy: ' سیگنال 784000 خرید',
+        image: 'images/c.png',
+        title: '14 آبان Cosmos سیگنال خرید',
+      ),
+      _get_list_date(
+        sel: ' سیگنال 582000 فروش',
+        buy: ' سیگنال 544000 خرید',
+        image: 'images/r.png',
+        title: '14 آبان Ripple سیگنال خرید',
+      ),
+    ];
     return Scaffold(
       appBar: _app_bar(),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-              children: [Dataa(), Dataa(), Dataa(), _get_logout(context)]),
+          child: Column(children: [
+            //be in 3 noghte migan Speread Oparator ke az list bala mikhonet
+            ...showe,
+            //  Dataa(), Dataa(),
+            _get_logout(context),
+          ]),
         ),
       ),
     );
   }
+}
+
+Widget _get_list_date(
+    {required String buy,
+    required String sel,
+    required String image,
+    required String title}) {
+  return SingleChildScrollView(
+    child: Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.all(8),
+          child: Center(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image(
+                image: AssetImage(
+                  '$image',
+                ),
+              ),
+            ),
+          ),
+        ),
+        Text(
+          '$title',
+          style: TextStyle(
+              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+        ),
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('$sel',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold)),
+            Icon(Icons.sell_outlined, color: Colors.red),
+            SizedBox(
+              width: 10,
+            ),
+            Icon(Icons.price_check, color: Colors.green),
+            Text('$buy',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.green,
+                    fontWeight: FontWeight.bold)),
+          ],
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Container(
+          width: 200,
+          child: Divider(
+            color: Colors.black,
+            thickness: 1,
+          ),
+        ),
+      ],
+    ),
+  );
 }
 
 Widget _get_logout(BuildContext context) {
@@ -62,66 +150,6 @@ Widget _get_logout(BuildContext context) {
           fontWeight: FontWeight.bold,
         ),
       ),
-    ),
-  );
-}
-
-Widget Dataa() {
-  return SingleChildScrollView(
-    child: Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.all(8),
-          child: Center(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image(
-                image: AssetImage(
-                  'images/c.png',
-                ),
-              ),
-            ),
-          ),
-        ),
-        Text(
-          '14 آبان Cosmus سیگنال خرید',
-          style: TextStyle(
-              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-        SizedBox(height: 10),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(' سیگنال 12000 فروش',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold)),
-            Icon(Icons.sell_outlined, color: Colors.red),
-            SizedBox(
-              width: 10,
-            ),
-            Icon(Icons.price_check, color: Colors.green),
-            Text(' سیگنال 12000 خرید',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.green,
-                    fontWeight: FontWeight.bold)),
-          ],
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        Container(
-          width: 200,
-          child: Divider(
-            color: Colors.black,
-            thickness: 1,
-          ),
-        )
-      ],
     ),
   );
 }
