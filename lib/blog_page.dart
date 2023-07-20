@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vip_signal/login_page.dart';
+
 import 'package:vip_signal/machin_larnimng.dart';
 
 class blog_pages extends StatelessWidget {
