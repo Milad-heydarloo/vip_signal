@@ -18,7 +18,7 @@ class run_app_class extends StatelessWidget {
       backgroundColor: Colors.black,
       title: Row(children: [
         Text('VIP ', style: TextStyle(color: Colors.amber)),
-        Text('اخبار سیگنال بورسی')
+        Text('اخبار سیگنال بورسی', style: TextStyle(color: Colors.amber))
       ]),
       centerTitle: true,
       iconTheme: IconThemeData(color: Colors.amber),
